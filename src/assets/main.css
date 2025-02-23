@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --color-header-bg: #dde3ea;
+  --color-text-primary: #273754;
+  --color-text-secondary: #747c92;
+  --color-no-results-icon: rgba(0, 0, 0, 0.8);
+
+  --header-height: 250px;
+  --container-max-width: 900px;
+  --grid-min-column: 250px;
+  --grid-auto-rows-base: 10px;
+
+  --spacing-container-top: -50px;
+  --spacing-container-bottom: 3rem;
+  --grid-row-gap: 32px;
+  --grid-column-gap: 45px;
+  --no-results-padding: 4rem 1rem;
+
+  --text-size-xl: 42px;
+  --text-size-lg: 32px;
+  --text-size-md: 1.5rem;
+  --text-size-sm: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  /* font-family: 'Poppins', serif; */
+  font-family: 'Montserrat', serif;
+  /* font-family: 'Roboto', serif; */
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  /* Medium (md) - ≥768px */
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  /* Large (lg) - ≥992px */
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  /* Extra Large (xl) - ≥1200px */
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  /* Extra Extra Large (xxl) - ≥1400px */
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
