@@ -94,9 +94,20 @@ export default {
       }
     },
 
+    // openModal(photo: UnsplashPhotoData) {
+    //   this.selectedPhoto = photo
+    // }
     openModal(photo: UnsplashPhotoData) {
-      this.selectedPhoto = photo
-    },
+    this.selectedPhoto = {
+      id: photo.id,
+      urls: { regular: photo.urls.regular },
+      alt_description: photo.alt_description,
+      user: {
+        name: photo.user.name,
+        location: photo.user.location || '',
+      },
+  } as UnsplashPhotoData
+},
   },
 }
 </script>
