@@ -38,7 +38,9 @@
       </div>
     </div>
 
-    <PhotoModal v-if="selectedPhoto" :photo="selectedPhoto" @close="selectedPhoto = null" />
+    <!-- <PhotoModal v-if="selectedPhoto" :photo="selectedPhoto" @close="selectedPhoto = null" /> -->
+    <PhotoModal v-if="selectedPhoto" :photos="[selectedPhoto]" @close="selectedPhoto = null" />
+
   </div>
 </template>
 
@@ -94,20 +96,9 @@ export default {
       }
     },
 
-    // openModal(photo: UnsplashPhotoData) {
-    //   this.selectedPhoto = photo
-    // }
     openModal(photo: UnsplashPhotoData) {
-    this.selectedPhoto = {
-      id: photo.id,
-      urls: { regular: photo.urls.regular },
-      alt_description: photo.alt_description,
-      user: {
-        name: photo.user.name,
-        location: photo.user.location || '',
-      },
-  } as UnsplashPhotoData
-},
+      this.selectedPhoto = photo
+    },
   },
 }
 </script>
