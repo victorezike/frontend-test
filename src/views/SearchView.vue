@@ -39,8 +39,13 @@
     </div>
 
     <!-- <PhotoModal v-if="selectedPhoto" :photo="selectedPhoto" @close="selectedPhoto = null" /> -->
-    <PhotoModal v-if="selectedPhoto" :photos="[selectedPhoto]" @close="selectedPhoto = null" />
-
+    <PhotoModal
+      v-if="selectedPhoto"
+      :photo="selectedPhoto"
+      :photos="searchResults"
+      :currentIndex="searchResults.findIndex(p => p.id === selectedPhoto?.id)"
+      @close="selectedPhoto = null"
+    />
   </div>
 </template>
 
